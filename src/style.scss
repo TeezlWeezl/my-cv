@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,200;0,300;0,400;0,700;1,200;1,400;1,700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .headline-1 {
+    @apply text-4xl
+  }
+  .headline-2 {
+    @apply text-2xl font-bold;
+    
+    &:before {
+      content: "┃";
+      color: rgb(241, 99, 99);
+      margin-right: .5rem;
+    }
+  }
+  .headline-3 {
+    @apply text-base font-bold;
+  }
+}
+
+@layer utilities {
+  .text-base {
+    line-height: 1;
+  }
+  .text-sm {
+    line-height: 1;
+  }
+}
+
+:root {
+  font-family: Raleway ,Helvetica, Arial, sans-serif;
+  line-height: 1;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  background-color: white;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+.grid-template {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-gap: 2.5rem;
+}
+
+.profile-img {
+  background: url("./img/bewerbungsfoto-02.webp");
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.contact-info-grid {
+  display: grid;
+  grid-template-columns: .5fr 5fr;
+  grid-template-rows: 1fr;
+  grid-gap: 1rem;
+  align-items: center;
+}
+
+.experience-grid {
+  display: grid;
+  grid-template-columns: 2fr 5fr;
+  column-gap: 10px;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: 2fr 5fr;
+  grid-template-rows: 40px 40px 40px 40px 40px;
+  column-gap: 10px;
+  align-items: center;
+}
+
+.interest-grid {
+  display: grid;
+  grid-template-columns: 2fr 2fr;
+  grid-template-rows: 1fr 1fr;
+  column-gap: 10px;
+}
+
+.icon {
+  filter: invert(53%) sepia(27%) saturate(2191%) hue-rotate(177deg) brightness(89%) contrast(81%);
+  width: 25px;
+  margin: auto;
+  display: block;
+}
+
+@media print {
+  body {
+    width: 8.25in;
+    height: 11.75in;
+    margin: 0 0 0 0;
+  }
+}
